@@ -1,21 +1,23 @@
 
+
 <html>
     <head>
         <title>Tobik's blog</title>
     </head>
     <body>
         <div>
-            <h1><a href="/">Tobik's Blog</a></h1>
+            <h1><a href="/">Tobiksssss's Blog</a></h1>
         </div>
 
-        <div>
-            <h2><a href="">Wellcome!</a></h2>
-            <p>Всем пррРрривет !! Меня зовут Тобик и это мой блог ррр ).</p>
-        </div>
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h>
+			<p>{{ post.text|linebreaksbr }}</p>
 
-        <div>
-            <h2><a href="">Первый пост</a></h2>
-            <p>Летс ду сам факин нойз ^^ Фор тест онли ).</p>
+        	<div>
+	{% endfor %}
+	
         </div>
     </body>
 </html
